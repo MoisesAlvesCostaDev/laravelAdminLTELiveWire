@@ -11,16 +11,14 @@
 
     <div class="container">
         <div class="row border ">
-            <div class="col">
-                ola
-            </div>
-            <div class="col">
-                ola
-            </div>
-
+            <livewire:counter />
         </div>
-
     </div>
+@stop
+
+
+@section('content')
+
 @stop
 
 @section('css')
