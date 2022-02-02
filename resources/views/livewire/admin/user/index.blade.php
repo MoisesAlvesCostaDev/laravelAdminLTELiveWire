@@ -25,54 +25,27 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>
-                        <span class="badge badge-success">Ativo</span>
-                    </td>
-                    <td class="text-nowrap">
-                        <a data-tt="tooltip" data-placement="top" title="Ver detalhes"><i
-                                class="fa fa-search m-0 p-0 ml-1 mr-1"></i></a>
-                        <a data-tt="tooltip" data-placement="top" title="Editar usuário"><i
-                                class="fas fa-edit m-0 p-0 ml-1 mr-1"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td> <span class="badge badge-success">Ativo</span></td>
-                    <td class="text-nowrap">
-                        <a data-tt="tooltip" data-placement="top" title="Ver detalhes"><i
-                                class="fa fa-search m-0 p-0 ml-1 mr-1"></i></a>
-                        <a data-tt="tooltip" data-placement="top" title="Editar usuário"><i
-                                class="fas fa-edit m-0 p-0 ml-1 mr-1"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td> <span class="badge badge-danger">inativo</span></td>
-                    <td class="text-nowrap">
-                        <a data-tt="tooltip" data-placement="top" title="Ver detalhes"><i
-                                class="fa fa-search m-0 p-0 ml-1 mr-1"></i></a>
-                        <a data-tt="tooltip" data-placement="top" title="Editar usuário"><i
-                                class="fas fa-edit m-0 p-0 ml-1 mr-1"></i></a>
-                    </td>
-                </tr>
+                @foreach ($users as $user)
+                    <tr>
+                        <th scope="row">{{ $user->id }}</th>
+                        <td>{{ $user->name }}</td>
+                        <td>{{ $user->email }}</td>
+                        <td>
+                            <span
+                                class="badge  {{ $user->status ? 'badge-success' : 'badge-danger' }}">{{ $user->status ? 'Ativo' : 'Inativo' }}</span>
+                        </td>
+                        <td class="text-nowrap">
+                            <a data-tt="tooltip" data-placement="top" title="Ver detalhes"><i
+                                    class="fa fa-search m-0 p-0 ml-1 mr-1"></i></a>
+                            <a data-tt="tooltip" data-placement="top" title="Editar usuário"><i
+                                    class="fas fa-edit m-0 p-0 ml-1 mr-1"></i></a>
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
-        <div class="clearfix mt-3 mr-3">
-            <ul class="pagination pagination m-0 float-right">
-                <li class="page-item"><a class="page-link" href="#">«</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">»</a></li>
-            </ul>
+        <div class="card-footer clearfix bg-white">
+            {{ $users->links('components.pagination.index') }}
         </div>
         <br>
     </div>

@@ -10,10 +10,10 @@
                     <h1>Usuários</h1>
                 </div>
                 <div class="col d-flex justify-content-end ">
-                    <button type="button" class="btn btn-secondary">
+                    <a type="button" class="btn btn-secondary" href="{{ route('admin.user.create') }}">
                         <i class="fa fa-plus mr-2"></i>
                         Adicionar usuário
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
