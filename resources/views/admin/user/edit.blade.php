@@ -3,15 +3,13 @@
 @section('title', 'User')
 
 @section('content_header')
-    <h1>Edit users</h1>
+    <div class="content-header">
+        <h1>Editar usuário</h1>
+    </div>
 @stop
 
 @section('content')
-    <div class="container">
-        <div class="row border ">
-
-        </div>
-    </div>
+    <livewire:admin.user.edit />
 @stop
 
 

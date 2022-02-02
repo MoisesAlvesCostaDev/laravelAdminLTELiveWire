@@ -13,6 +13,23 @@ class UserController extends Controller
 {
     public function index()
     {
+        return view('admin.user.index');
+    }
+
+    public function create()
+    {
         return view('admin.user.create');
+    }
+
+    public function show($userId)
+    {
+
+        return view('admin.user.show');
+    }
+
+    public function edit($userId)
+    {
+
+        return view('admin.user.edit');
     }
 }
