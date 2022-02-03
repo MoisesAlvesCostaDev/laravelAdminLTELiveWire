@@ -9,7 +9,7 @@
 @stop
 
 @section('content')
-    <livewire:admin.user.edit />
+    <livewire:admin.user.edit :userId="$user" />
 @stop
 
 

@@ -34,7 +34,7 @@
                             <div class="col pr-0 d-flex align-items-center pt-3">
                                 <div class="custom-control custom-checkbox">
                                     <input class="custom-control-input" type="checkbox" id="customCheckbox2"
-                                        @if ($user->status) checked  @endif>
+                                        @if ($user->status) checked  @endif disabled>
                                     <label for="customCheckbox2" class="custom-control-label"> Ativo </label>
                                 </div>
                             </div>

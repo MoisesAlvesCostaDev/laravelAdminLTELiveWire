@@ -4,7 +4,7 @@
             <h5 class="card-title wrapper">Listagem de usuários</h5>
             <div class="card-tools">
                 <div class="input-group input-group-sm" style="width: 150px;">
-                    <input type="text" name="table_search" class="form-control float-right"
+                    <input wire:model="search" type="search" name="name" class="form-control float-right"
                         placeholder="Nome do usuário">
                     <div class="input-group-append">
                         <button type="submit" class="btn btn-default">
@@ -35,10 +35,10 @@
                                 class="badge  {{ $user->status ? 'badge-success' : 'badge-danger' }}">{{ $user->status ? 'Ativo' : 'Inativo' }}</span>
                         </td>
                         <td class="text-nowrap">
-                            <a data-tt="tooltip" data-placement="top" title="Ver detalhes"><i
-                                    class="fa fa-search m-0 p-0 ml-1 mr-1"></i></a>
-                            <a data-tt="tooltip" data-placement="top" title="Editar usuário"><i
-                                    class="fas fa-edit m-0 p-0 ml-1 mr-1"></i></a>
+                            <a href="{{ route('admin.user.show', $user->id) }}" data-tt="tooltip" data-placement="top"
+                                title="Ver detalhes"><i class="fa fa-search m-0 p-0 ml-1 mr-1"></i></a>
+                            <a href="{{ route('admin.user.edit', $user->id) }}" data-tt="tooltip" data-placement="top"
+                                title="Editar usuário"><i class="fas fa-edit m-0 p-0 ml-1 mr-1"></i></a>
                         </td>
                     </tr>
                 @endforeach

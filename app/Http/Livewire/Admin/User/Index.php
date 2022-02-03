@@ -12,9 +12,16 @@ class Index extends Component
 
     use WithPagination;
 
+    public $search;
+
     public function render()
     {
-        return view('livewire.admin.user.index', ['users' => User::paginate(10)]);
-    }
 
+
+        $users = User::where('name', 'like',  "%{$this->search}%")
+            ->orderBy('id', 'asc')
+            ->paginate(25);
+
+        return view('livewire.admin.user.index', ['users' => $users]);
+    }
 }

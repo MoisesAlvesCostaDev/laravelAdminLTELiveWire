@@ -5,9 +5,6 @@ namespace App\Http\Livewire\Admin\User;
 use Livewire\Component;
 use App\Models\User;
 
-
-
-
 class Show extends Component
 {
 
