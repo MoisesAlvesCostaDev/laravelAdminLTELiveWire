@@ -24,12 +24,12 @@ class UserController extends Controller
     public function show($userId)
     {
 
-        return view('admin.user.show');
+        return view('admin.user.show', ['user' => $userId]);
     }
 
     public function edit($userId)
     {
 
-        return view('admin.user.edit');
+        return view('admin.user.edit', ['userId' => $userId]);
     }
 }
