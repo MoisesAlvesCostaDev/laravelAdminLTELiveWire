@@ -255,6 +255,11 @@ return [
         ],
         ['header' => 'account_settings'],
         [
+            'text' => 'user',
+            'url'  => 'users',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
             'text' => 'profile',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
@@ -472,5 +477,5 @@ return [
     |
     */
 
-    'livewire' => false,
+    'livewire' => true,
 ];

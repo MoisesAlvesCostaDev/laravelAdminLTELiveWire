@@ -1,17 +1,15 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'User')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <div class="content-header">
+        <h1>Mostrar usuário</h1>
+    </div>
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
-
-    <div class="container">
-
-    </div>
+    <livewire:admin.user.show :userId="$user" />
 @stop
 
 
