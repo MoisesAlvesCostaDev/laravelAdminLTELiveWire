@@ -18,6 +18,13 @@ Simples admin com um cadastro de usuário com objetivo de servir de base para fu
 
 #
 
+## Ux Design
+
+Para este projeto foram feitas algumas personalizações nos padrões do AminLTE para facilitar o trabalho no figma foi utilizado
+um Ux kt da: [themeselection.com](https://themeselection.com) , [layout do projeto esta aqui](https://www.figma.com/file/Qpm5wCdVgfaaY3YEcG5KW2/LaravelAdminLTELiveWire?node-id=15201%3A2437)
+
+#
+
 ## O que foi usado
 
 -   [Laravel](https://laravel.com/).
